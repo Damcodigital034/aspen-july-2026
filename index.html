@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aspen LinkedIn — July 2026 Feed Preview</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#f4f2ee;color:#1f2124}
+.hero{background:linear-gradient(160deg,#0f1c14 0%,#1f2124 70%);padding:44px 20px 38px;color:#fff}
+.hero-in{max-width:760px;margin:0 auto}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;color:#8fce56;text-transform:uppercase;margin-bottom:12px}
+.hero h1{font-size:32px;font-weight:800;letter-spacing:-0.6px;line-height:1.1;margin-bottom:10px}
+.hero .sub{font-size:14.5px;color:#c9d4c3;max-width:640px;line-height:1.55}
+.meta{display:flex;flex-wrap:wrap;gap:22px;margin-top:22px}
+.mp{display:flex;flex-direction:column}
+.mp .l{font-size:10px;font-weight:700;color:#7a8a72;letter-spacing:1.5px;text-transform:uppercase}
+.mp .v{font-size:14px;font-weight:700;margin-top:3px;color:#fff}
+.notes{max-width:760px;margin:26px auto 0;padding:0 20px}
+.nbox{background:#fff;border:1px solid #e0ddd6;border-left:4px solid #2E7D32;border-radius:10px;padding:18px 22px;margin-bottom:12px}
+.nbox .nt{font-size:11px;font-weight:800;letter-spacing:1.6px;color:#2E7D32;text-transform:uppercase;margin-bottom:8px}
+.nbox ul{padding-left:18px;font-size:13.5px;color:#3d4238;line-height:1.7}
+.feed{max-width:560px;margin:30px auto 0;padding:0 10px}
+.datechip{display:flex;align-items:center;gap:10px;margin:26px 2px 8px}
+.dc-date{font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#4a5245;background:#e9e6de;padding:4px 10px;border-radius:20px}
+.dc-kind{font-size:11.5px;color:#7a8272;font-weight:600}
+.card{background:#fff;border:1px solid #e0ddd6;border-radius:10px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,0.05)}
+.reshare-line{font-size:12px;color:#666;padding:10px 16px 0;font-weight:600}
+.head{display:flex;align-items:flex-start;gap:10px;padding:14px 16px 8px}
+.av{width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.av-aspen{background:transparent}.av-aspen svg{width:48px;height:48px}
+.av-init{background:#1f3a5c;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px}
+.who{display:flex;flex-direction:column;min-width:0;flex:1}
+.nm{font-size:14px;font-weight:700;color:#1f2124;line-height:1.25}
+.tg{font-size:12px;color:#666;line-height:1.3;margin-top:1px}
+.tm{font-size:12px;color:#888;margin-top:2px}
+.fol{color:#0a66c2;font-size:13.5px;font-weight:700;white-space:nowrap;padding-top:2px}
+.cap{font-size:14px;line-height:1.5;color:#1f2124;white-space:pre-wrap;padding:6px 16px 4px;overflow-wrap:break-word}
+.cap.clamp{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.cap .tag{color:#0a66c2;font-weight:600}
+.more{display:inline-block;color:#666;font-size:13.5px;font-weight:600;cursor:pointer;margin:0 16px 8px;user-select:none}
+.more:hover{color:#0a66c2;text-decoration:underline}
+.media{background:#000;position:relative}
+.media img,.media video{width:100%;display:block}
+.carousel .cfr{display:none}.carousel .cfr.on{display:block}
+.cnav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,0.92);color:#1f2124;font-size:16px;cursor:pointer;box-shadow:0 1px 6px rgba(0,0,0,0.35);display:flex;align-items:center;justify-content:center}
+.cnav.prev{left:10px}.cnav.next{right:10px}.cnav:hover{background:#fff}
+.ccount{position:absolute;top:12px;right:12px;background:rgba(0,0,0,0.7);color:#fff;font-size:12px;font-weight:700;padding:3px 10px;border-radius:12px}
+.cdots{position:absolute;bottom:10px;left:0;right:0;display:flex;justify-content:center;gap:6px}
+.dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,0.45);cursor:pointer}
+.dot.on{background:#fff}
+.vmock{aspect-ratio:4/5;background:radial-gradient(ellipse at 65% 30%,#1c2f4a 0%,#0d1526 65%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;position:relative;overflow:hidden}
+.vmock-chip{position:absolute;top:12px;left:12px;background:rgba(245,180,84,0.95);color:#231a06;font-size:10.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;padding:5px 10px;border-radius:4px}
+.vmock-face{width:130px;height:130px;border-radius:50%;background:#27405f;display:flex;align-items:center;justify-content:center;color:#fff;font-size:38px;font-weight:800;overflow:hidden;border:3px solid rgba(255,255,255,0.25)}
+.vmock-face img{width:100%;height:100%;object-fit:cover}
+.vmock-wave{display:flex;align-items:center;gap:3px;height:30px}
+.vmock-wave i{width:3.5px;background:#5aa8ff;border-radius:2px;animation:wv 1.1s ease-in-out infinite}
+@keyframes wv{0%,100%{height:8px}50%{height:26px}}
+.vmock-overlay{position:absolute;bottom:0;left:0;right:0;padding:18px 20px;background:linear-gradient(to top,rgba(0,0,0,0.85),transparent);color:#fff;font-size:14.5px;font-weight:700;line-height:1.4}
+.vmock-overlay small{display:block;font-size:11px;font-weight:600;color:#b8c8dc;margin-top:6px}
+.acts{display:flex;justify-content:space-around;padding:8px 8px;border-top:1px solid #eee}
+.act{font-size:13px;color:#555;font-weight:600;padding:8px 10px;border-radius:6px}
+.act:hover{background:#f2f0ea}
+.review{display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:10px 4px 0}
+.rv{padding:7px 14px;font-size:11.5px;font-weight:800;letter-spacing:0.6px;text-transform:uppercase;border-radius:6px;border:1.5px solid;cursor:pointer;background:transparent;transition:all .15s}
+.rv.ok{border-color:#2E7D32;color:#2E7D32}.rv.ok.on,.rv.ok:hover{background:#2E7D32;color:#fff}
+.rv.ch{border-color:#c77d2a;color:#c77d2a}.rv.ch.on,.rv.ch:hover{background:#c77d2a;color:#fff}
+.rnote{font-size:12px;color:#8a6d1f;background:#fdf6e3;border:1px solid #f0e3b8;border-radius:6px;padding:7px 10px;line-height:1.45;flex-basis:100%}
+.sumbar{position:sticky;bottom:0;background:#1f2124;padding:12px;text-align:center;margin-top:40px}
+.sumbar button{background:#5F9828;border:none;color:#fff;font-size:13px;font-weight:800;letter-spacing:0.6px;padding:11px 26px;border-radius:8px;cursor:pointer}
+.sumbar button:hover{background:#4d7c20}
+.sumbar .hint{color:#9aa694;font-size:11.5px;margin-top:6px}
+.footer{text-align:center;font-size:12px;color:#8a9182;padding:34px 16px 60px;line-height:1.6}
+@media (max-width:620px){.hero h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="hero"><div class="hero-in">
+  <div class="eyebrow">Aspen Claims Service &middot; LinkedIn</div>
+  <h1>July 2026 &mdash; the feed, as it will run</h1>
+  <div class="sub">Every post below is shown the way it will appear in the LinkedIn feed &mdash; final creatives, full captions, correct posting profile. Scroll like you would scroll LinkedIn. Tap &ldquo;see more&rdquo; to read any caption in full, and use the arrows on the two carousels.</div>
+  <div class="meta">
+    <div class="mp"><span class="l">Window</span><span class="v">10 July &ndash; 2 Aug</span></div>
+    <div class="mp"><span class="l">Posts</span><span class="v">12 (+2 page reshares)</span></div>
+    <div class="mp"><span class="l">Mix</span><span class="v">6 static &middot; 2 carousel &middot; 2 video &middot; 2 long-form</span></div>
+    <div class="mp"><span class="l">Cadence</span><span class="v">Mon &middot; Wed &middot; Fri</span></div>
+  </div>
+</div></div>
+<div class="notes">
+  <div class="nbox"><div class="nt">Three things to confirm while you scroll</div>
+    <ul>
+      <li><strong>Routing</strong> &mdash; the two long-form pieces, the POV post and Mark&rsquo;s voiceover run from <strong>Mark&rsquo;s profile</strong> (Brent&rsquo;s VO from his), with the Aspen page resharing. Say the word and we schedule them that way.</li>
+      <li><strong>Byline title</strong> &mdash; the quote cards sign Mark as <strong>&ldquo;CEO&rdquo;</strong>. Confirm that&rsquo;s the title you want on public cards, and we&rsquo;ll align every template to it.</li>
+      <li><strong>The two voiceover videos</strong> (17 &amp; 27 July) are in production &mdash; the placeholders show the approved direction; finished cuts come to you before their post dates.</li>
+    </ul>
+  </div>
+</div>
+<div class="feed">
+
+<div class="post-wrap" id="p1">
+  <div class="datechip"><span class="dc-date">Fri · 10 July</span><span class="dc-kind">Static → animated video</span></div>
+  <div class="card">
+    
+    <div class="head"><div class="av av-aspen"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="#0e1b12" stroke="#5F9828" stroke-width="2"/><path d="M8 24 L16 11 L21 18 L24 14 L28 24 Z" fill="#5F9828"/></svg></div>
+      <div class="who"><span class="nm">Aspen Claims Service</span><span class="tg">Property Claims Services</span><span class="tm">Scheduled &middot; 10 July &#127760;</span></div>
+      <div class="fol">+ Follow</div>
+    </div>
+    <div class="cap clamp" id="cap-p1">Same storm. Same geography. Same regional adjuster pool. Carriers still walk away with cycle times that differ by a wide margin.
+
+The difference almost never sits in the field. It sits in the workflow upstream of it.
+
+Three things separate the carriers who handle CAT cycle time well:
+
+Intake routing — how fast a claim gets from FNOL to an assigned adjuster. The best operations have automated the routing most still run by hand.
+
+Coverage decision authority — how far down the workflow a coverage call can be made without an escalation. Route every contested question to one review queue and you build a bottleneck the field can&<span class="tag">#x27</span>;t clear.
+
+Supplement protocol clarity — whether the adjuster knows, before leaving the property, what triggers a supplement and what doesn&<span class="tag">#x27</span>;t. Without it, files reopen to settle questions that should have closed at first inspection.
+
+None of this shows on the deployment dashboard. All of it shows up in the cycle time number.
+
+If your hurricane post-mortem is underway, which of these three is costing you the most?
+
+<span class="tag">#PropertyClaims</span> <span class="tag">#InsuranceClaims</span> <span class="tag">#CATResponse</span></div>
+    <span class="more" data-t="cap-p1">&hellip;see more</span>
+    <div class="media"><video controls playsinline preload="metadata" poster="assets/video_july_frame.jpg"><source src="assets/video_july.mp4" type="video/mp4"/></video></div>
+    <div class="acts">
+      <span class="act">&#128077; Like</span><span class="act">&#128172; Comment</span><span class="act">&#128257; Repost</span><span class="act">&#10148; Send</span>
+    </div>
+  </div>
+  <div class="review">
+    <button class="rv ok" data-p="p1">&#10003; Approve</button>
+    <button class="rv ch" data-p="p1">&#9998; Needs changes</button>
+    <div class="rnote">&#9998; Delivered as an 11-second animated visual (upgrade on the static version — both exist).</div>
+  </div>
+</div>
+
+<div class="post-wrap" id="p2">
+  <div class="datechip"><span class="dc-date">Sun · 12 July</span><span class="dc-kind">Carousel · Part 03 of How Claims Actually Work</span></div>
+  <div class="card">
+    
+    <div class="head"><div class="av av-aspen"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="#0e1b12" stroke="#5F9828" stroke-width="2"/><path d="M8 24 L16 11 L21 18 L24 14 L28 24 Z" fill="#5F9828"/></svg></div>
+      <div class="who"><span class="nm">Aspen Claims Service</span><span class="tg">Property Claims Services</span><span class="tm">Scheduled &middot; 12 July &#127760;</span></div>
+      <div class="fol">+ Follow</div>
+    </div>
+    <div class="cap clamp" id="cap-p2">The first 24 hours of a claim shape everything that follows — and most policyholders never see the work that makes those hours feel calm.
+
+Here&<span class="tag">#x27</span>;s what actually happens in the first day, and why it matters more than the inspection itself.
+
+Part 03 of How Claims Actually Work.
+
+What did your first call after filing a claim feel like — managed, or a queue?
+
+<span class="tag">#PropertyClaims</span> <span class="tag">#InsuranceClaims</span> <span class="tag">#ClaimsManagement</span></div>
+    <span class="more" data-t="cap-p2">&hellip;see more</span>
+    <div class="media carousel" data-n="6"><img class="cfr on" data-i="0" src="assets/carousel_12jul_f1.jpg" alt="frame 1"/><img class="cfr" data-i="1" src="assets/carousel_12jul_f2.jpg" alt="frame 2"/><img class="cfr" data-i="2" src="assets/carousel_12jul_f3.jpg" alt="frame 3"/><img class="cfr" data-i="3" src="assets/carousel_12jul_f4.jpg" alt="frame 4"/><img class="cfr" data-i="4" src="assets/carousel_12jul_f5.jpg" alt="frame 5"/><img class="cfr" data-i="5" src="assets/carousel_12jul_f6.jpg" alt="frame 6"/><button class="cnav prev" aria-label="previous">&#10094;</button><button class="cnav next" aria-label="next">&#10095;</button><span class="ccount">1/6</span><div class="cdots"><span class="dot on" data-i="0"></span><span class="dot" data-i="1"></span><span class="dot" data-i="2"></span><span class="dot" data-i="3"></span><span class="dot" data-i="4"></span><span class="dot" data-i="5"></span></div></div>
+    <div class="acts">
+      <span class="act">&#128077; Like</span><span class="act">&#128172; Comment</span><span class="act">&#128257; Repost</span><span class="act">&#10148; Send</span>
+    </div>
+  </div>
+  <div class="review">
+    <button class="rv ok" data-p="p2">&#10003; Approve</button>
+    <button class="rv ch" data-p="p2">&#9998; Needs changes</button>
+    
+  </div>
+</div>
+
+<div class="post-wrap" id="p3">
+  <div class="datechip"><span class="dc-date">Mon · 13 July</span><span class="dc-kind">Long-form text post · Mark&#x27;s profile</span></div>
+  <div class="card">
+    
+    <div class="head"><img class="av" src="assets/mark_avatar.jpg" alt="Mark Vetrovec"/>
+      <div class="who"><span class="nm">Mark Vetrovec</span><span class="tg">President & Co-Founder, Aspen Claims Service</span><span class="tm">Scheduled &middot; 13 July &#127760;</span></div>
+      <div class="fol">+ Follow</div>
+    </div>
+    <div class="cap clamp" id="cap-p3">The RFP tells you who writes the best proposal. It rarely tells you who will perform best on your book.
+
+That gap is where most disappointing partnerships begin — and it&<span class="tag">#x27</span>;s the cheapest thing in the whole process to fix.
+
+The standard questions are fine as far as they go: adjuster headcount, geographic coverage, average cycle time, cost per file, tech stack, SLAs, sample reports. They filter for proposal quality, not operational fit.
+
+Here are the questions I&<span class="tag">#x27</span>;d add — the ones that tell you how a partner will actually run your files.
+
+1. How does the partner&<span class="tag">#x27</span>;s file standard get set?
+Every claims partner will tell you their standards are high. The useful question is who decides what those standards are.
+Some calibrate to whatever the carrier seems to accept, and the standard quietly drifts down to whatever passes review. It&<span class="tag">#x27</span>;s invisible during deployment and expensive after.
+Others set their standard independently — photo completeness, scope defensibility, coverage rationale documented in-line — applied the same way regardless of which desk is reviewing.
+Ask them to walk you through what their QA reviewer looks for. If it&<span class="tag">#x27</span>;s specific and independent of carrier preferences, that&<span class="tag">#x27</span>;s the operation you want.
+
+2. What is the QA layer actually catching, and how often?
+Most partners report on submissions and closures. Far fewer report on what their internal QA caught before the file reached your desk.
+QA that catches gaps, coverage misalignments, and scope errors before submission is doing the work that prevents reopens downstream. QA that rubber-stamps is exporting that work to your desk.
+Ask how many files QA reviewed last quarter, how many needed revision, and what the common gaps were. The specificity of the answer tells you whether QA is real or a checkbox.
+
+3. How are field adjusters trained, and how is that kept current?
+Most RFPs ask about certifications and licenses. Far fewer ask how training is refreshed during the working year.
+Partners who handle complex losses well tend to train mid-year, not just at hire — new regulatory developments, new documentation expectations, new coverage patterns from desks across the industry.
+Ask about the last training session their adjusters completed. If it&<span class="tag">#x27</span>;s specific and recent, the operation is paying attention.
+
+4. What changes operationally during a CAT event?
+Most partners describe CAT capability in capacity terms — deployable adjusters, geographic reach, surge availability. The useful question is what changes when the storm hits.
+Do file standards hold under surge, or relax? Does QA continue, or move to sampling? Does communication discipline hold, or does the team go quiet because it&<span class="tag">#x27</span>;s busy?
+Ask for a specific story from a past CAT event — what worked, what didn&<span class="tag">#x27</span>;t, what they changed after. Operational specifics separate the partners who&<span class="tag">#x27</span>;ve been through it from the ones talking in generalities.
+
+5. Who owns the relationship — a rotating name, or a named point of contact?
+Most deployments hand the carrier a field adjuster name that changes file to file, and continuity gets rebuilt with every claim.
+Some partners run a desk adjuster model: a named contact who owns communication, status, and escalation across every file on your book, whichever field adjuster is on the ground. One relationship to manage, not a rotating list.
+It&<span class="tag">#x27</span>;s a structural question about how they operate. Ask it directly.
+
+None of these get you a longer proposal. They get you a more useful one — and they surface operational fit while switching costs are still low.
+
+The RFP is the cheapest place to learn what actually determines performance. Worth using the space deliberately.
+
+What&<span class="tag">#x27</span>;s the one question your last RFP didn&<span class="tag">#x27</span>;t ask that you wish it had?
+— Mark Vetrovec
+CEO, Aspen Claims Service</div>
+    <span class="more" data-t="cap-p3">&hellip;see more</span>
+    
+    <div class="acts">
+      <span class="act">&#128077; Like</span><span class="act">&#128172; Comment</span><span class="act">&#128257; Repost</span><span class="act">&#10148; Send</span>
+    </div>
+  </div>
+  <div class="review">
+    <button class="rv ok" data-p="p3">&#10003; Approve</button>
+    <button class="rv ch" data-p="p3">&#9998; Needs changes</button>
+    <div class="rnote">&#9998; Runs from Mark&#x27;s personal profile (routing pending your confirmation).</div>
+  </div>
+</div>
+
+<div class="post-wrap" id="p3r">
+  <div class="datechip"><span class="dc-date">Mon · 13 July</span><span class="dc-kind">Aspen page reshare of Mark&#x27;s post</span></div>
+  <div class="card">
+    <div class="reshare-line">&#8635; Aspen Claims Service reshared this from Mark Vetrovec</div>
+    <div class="head"><div class="av av-aspen"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="#0e1b12" stroke="#5F9828" stroke-width="2"/><path d="M8 24 L16 11 L21 18 L24 14 L28 24 Z" fill="#5F9828"/></svg></div>
+      <div class="who"><span class="nm">Aspen Claims Service</span><span class="tg">Property Claims Services</span><span class="tm">Scheduled &middot; 13 July &#127760;</span></div>
+      <div class="fol">+ Follow</div>
+    </div>
+    <div class="cap clamp" id="cap-p3r">&quot;Most RFPs compare partners against each other. The better ones compare each partner against what your operation actually needs.&quot;
+— Mark Vetrovec, CEO · Aspen Claims Service
+
+Five questions worth adding to your next claims RFP — the ones that surface how a partner will actually run your files.
+
+Which one would change your shortlist?
+
+<span class="tag">#ClaimsManagement</span> <span class="tag">#InsuranceClaims</span> <span class="tag">#PropertyClaims</span></div>
+    <span class="more" data-t="cap-p3r">&hellip;see more</span>
+    <div class="media"><img src="assets/quote_13jul.png" alt=""/></div>
+    <div class="acts">
+      <span class="act">&#128077; Like</span><span class="act">&#128172; Comment</span><span class="act">&#128257; Repost</span><span class="act">&#10148; Send</span>
+    </div>
+  </div>
+  <div class="review">
+    <button class="rv ok" data-p="p3r">&#10003; Approve</button>
+    <button class="rv ch" data-p="p3r">&#9998; Needs changes</button>
+    <div class="rnote">&#9998; Quote card reads “CEO – Aspen Claims Service” — confirm the byline title before posting.</div>
+  </div>
+</div>
+
+<div class="post-wrap" id="p4">
+  <div class="datechip"><span class="dc-date">Wed · 15 July</span><span class="dc-kind">Static · Regulatory (kept general — no bills cited as law)</span></div>
+  <div class="card">
+    
+    <div class="head"><div class="av av-aspen"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="#0e1b12" stroke="#5F9828" stroke-width="2"/><path d="M8 24 L16 11 L21 18 L24 14 L28 24 Z" fill="#5F9828"/></svg></div>
+      <div class="who"><span class="nm">Aspen Claims Service</span><span class="tg">Property Claims Services</span><span class="tm">Scheduled &middot; 15 July &#127760;</span></div>
+      <div class="fol">+ Follow</div>
+    </div>
+    <div class="cap clamp" id="cap-p4">California keeps raising the bar on wildfire claims — and the file standard that cleared last year doesn&<span class="tag">#x27</span>;t always clear this year.
+
+The direction of travel is consistent: documentation, additional living expense, and smoke are all getting more attention.
+
+Documentation keeps widening. Pre-loss condition, evacuation timelines, and access constraints increasingly need to live in the file. The contemporaneous note discipline good adjusters already practice is closer to the baseline than the extra mile.
+
+ALE is under closer review. Additional living expense windows get examined more carefully, especially on extended-displacement losses. The partners handling this well treat the ALE clock as part of the file from day one, not an afterthought.
+
+Smoke claims are getting more attention. How smoke and residue damage is assessed and documented is a common friction point — and a common source of reopens when it&<span class="tag">#x27</span>;s handled thinly at first inspection.
+
+None of this is dramatic on its own. Cumulatively, it raises the standard on every California wildfire file. If you haven&<span class="tag">#x27</span>;t refreshed your wildfire workflow in the last year, this is a good moment.
+
+When did your California wildfire workflow last get a real look?
+
+<span class="tag">#WildfireResponse</span> <span class="tag">#PropertyClaims</span> <span class="tag">#InsuranceClaims</span></div>
+    <span class="more" data-t="cap-p4">&hellip;see more</span>
+    <div class="media"><img src="assets/static_15jul.png" alt=""/></div>
+    <div class="acts">
+      <span class="act">&#128077; Like</span><span class="act">&#128172; Comment</span><span class="act">&#128257; Repost</span><span class="act">&#10148; Send</span>
+    </div>
+  </div>
+  <div class="review">
+    <button class="rv ok" data-p="p4">&#10003; Approve</button>
+    <button class="rv ch" data-p="p4">&#9998; Needs changes</button>
+    
+  </div>
+</div>
+
+<div class="post-wrap" id="p5">
+  <div class="datechip"><span class="dc-date">Fri · 17 July</span><span class="dc-kind">Video · Brent VO — creative in production (AI voiceover)</span></div>
+  <div class="card">
+    
+    <div class="head"><div class="av av-init">BM</div>
+      <div class="who"><span class="nm">Brent Morrow</span><span class="tg">Operations Manager, Aspen Claims Service</span><span class="tm">Scheduled &middot; 17 July &#127760;</span></div>
+      <div class="fol">+ Follow</div>
+    </div>
+    <div class="cap clamp" id="cap-p5">The carrier desk shapes field adjuster performance more than most carriers realize.
+
+A short one from Brent on why desk responsiveness is a cycle-time lever hiding in plain sight.
+
+How fast does your desk answer a coverage call?
+
+<span class="tag">#ClaimsOperations</span> <span class="tag">#InsuranceClaims</span> <span class="tag">#PropertyClaims</span></div>
+    <span class="more" data-t="cap-p5">&hellip;see more</span>
+    <div class="media vmock"><div class="vmock-chip">Creative in production · AI voiceover</div><div class="vmock-face"><span>BM</span></div><div class="vmock-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="vmock-overlay">&ldquo;The desks that get the cleanest files aren&#x27;t the ones with the most aggressive SLAs.&rdquo;<small>Brent Morrow · Operations Manager · Aspen Claims</small></div></div>
+    <div class="acts">
+      <span class="act">&#128077; Like</span><span class="act">&#128172; Comment</span><span class="act">&#128257; Repost</span><span class="act">&#10148; Send</span>
+    </div>
+  </div>
+  <div class="review">
+    <button class="rv ok" data-p="p5">&#10003; Approve</button>
+    <button class="rv ch" data-p="p5">&#9998; Needs changes</button>
+    <div class="rnote">&#9998; Video not yet produced — placeholder shows the approved visual direction.</div>
+  </div>
+</div>
+
+<div class="post-wrap" id="p6">
+  <div class="datechip"><span class="dc-date">Mon · 20 July</span><span class="dc-kind">Static · Supplements</span></div>
+  <div class="card">
+    
+    <div class="head"><div class="av av-aspen"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="#0e1b12" stroke="#5F9828" stroke-width="2"/><path d="M8 24 L16 11 L21 18 L24 14 L28 24 Z" fill="#5F9828"/></svg></div>
+      <div class="who"><span class="nm">Aspen Claims Service</span><span class="tg">Property Claims Services</span><span class="tm">Scheduled &middot; 20 July &#127760;</span></div>
+      <div class="fol">+ Follow</div>
+    </div>
+    <div class="cap clamp" id="cap-p6">Most supplements aren&<span class="tag">#x27</span>;t surprises. They&<span class="tag">#x27</span>;re documentation failures that revealed themselves later.
+
+A supplement is what happens when a scope written in the field couldn&<span class="tag">#x27</span>;t carry the full story of the loss. The damage was always there. The note wasn&<span class="tag">#x27</span>;t.
+
+This is why contemporaneous documentation matters more than any process diagram a partner can show you. The scope that captures adjacent damage at first inspection produces a settlement that closes. The one that misses it produces a supplement, a delay, a call from a frustrated policyholder, and a carrier dollar paid twice.
+
+The work to prevent supplements is done before the adjuster leaves the property. Photos taken with intent. Measurements logged, not estimated. Adjacent areas walked, not assumed.
+
+It&<span class="tag">#x27</span>;s not glamorous. It&<span class="tag">#x27</span>;s also the difference between a file that closes once and a file that closes three times.
+
+What&<span class="tag">#x27</span>;s the last supplement you saw that a better first inspection would have prevented?
+
+<span class="tag">#ClaimsOperations</span> <span class="tag">#PropertyClaims</span> <span class="tag">#PolicyholderExperience</span></div>
+    <span class="more" data-t="cap-p6">&hellip;see more</span>
+    <div class="media"><img src="assets/static_20jul.png" alt=""/></div>
+    <div class="acts">
+      <span class="act">&#128077; Like</span><span class="act">&#128172; Comment</span><span class="act">&#128257; Repost</span><span class="act">&#10148; Send</span>
+    </div>
+  </div>
+  <div class="review">
+    <button class="rv ok" data-p="p6">&#10003; Approve</button>
+    <button class="rv ch" data-p="p6">&#9998; Needs changes</button>
+    
+  </div>
+</div>
+
+<div class="post-wrap" id="p7">
+  <div class="datechip"><span class="dc-date">Wed · 22 July</span><span class="dc-kind">Static · Adjuster turnover</span></div>
+  <div class="card">
+    
+    <div class="head"><div class="av av-aspen"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="#0e1b12" stroke="#5F9828" stroke-width="2"/><path d="M8 24 L16 11 L21 18 L24 14 L28 24 Z" fill="#5F9828"/></svg></div>
+      <div class="who"><span class="nm">Aspen Claims Service</span><span class="tg">Property Claims Services</span><span class="tm">Scheduled &middot; 22 July &#127760;</span></div>
+      <div class="fol">+ Follow</div>
+    </div>
+    <div class="cap clamp" id="cap-p7">The adjuster who opens a file often isn&<span class="tag">#x27</span>;t the one who closes it — and that handoff is one of the most reliable predictors of quality problems downstream.
+
+When an adjuster picks up a partially-worked file from a colleague who&<span class="tag">#x27</span>;s rotated out, two things happen. They rebuild context the cycle time number never accounts for. And the memory of the original inspection — the judgment calls, the coverage questions considered, the useful thing the policyholder mentioned — usually gets lost in the handoff.
+
+The carriers running cleaner files tend to work with partners who keep mid-deployment turnover low. Not zero — that&<span class="tag">#x27</span>;s unrealistic — but low.
+
+Three things worth checking on your next partner review:
+How many of your files changed adjusters between intake and closure last quarter?
+Of those, how many produced a supplement or reopen within 90 days?
+Is your partner reporting on adjuster continuity at all — or is that data sitting in their system, never surfacing?
+
+The partners who manage this well usually run a single point of contact that holds the file&<span class="tag">#x27</span>;s continuity even when the field adjuster changes. The ones who don&<span class="tag">#x27</span>;t, don&<span class="tag">#x27</span>;t.
+
+Do you actually know how many of your files changed hands last quarter?
+
+<span class="tag">#ClaimsOperations</span> <span class="tag">#PropertyClaims</span> <span class="tag">#ClaimsManagement</span></div>
+    <span class="more" data-t="cap-p7">&hellip;see more</span>
+    <div class="media"><img src="assets/static_22jul.png" alt=""/></div>
+    <div class="acts">
+      <span class="act">&#128077; Like</span><span class="act">&#128172; Comment</span><span class="act">&#128257; Repost</span><span class="act">&#10148; Send</span>
+    </div>
+  </div>
+  <div class="review">
+    <button class="rv ok" data-p="p7">&#10003; Approve</button>
+    <button class="rv ch" data-p="p7">&#9998; Needs changes</button>
+    
+  </div>
+</div>
+
+<div class="post-wrap" id="p8">
+  <div class="datechip"><span class="dc-date">Fri · 24 July</span><span class="dc-kind">Mark POV · Mark&#x27;s profile</span></div>
+  <div class="card">
+    
+    <div class="head"><img class="av" src="assets/mark_avatar.jpg" alt="Mark Vetrovec"/>
+      <div class="who"><span class="nm">Mark Vetrovec</span><span class="tg">President & Co-Founder, Aspen Claims Service</span><span class="tm">Scheduled &middot; 24 July &#127760;</span></div>
+      <div class="fol">+ Follow</div>
+    </div>
+    <div class="cap clamp" id="cap-p8">The question I get from claims leadership more than any other isn&<span class="tag">#x27</span>;t about cycle time or cost. It&<span class="tag">#x27</span>;s some version of: how do we get policyholders to trust the claims process again?
+
+Trust in claims has been sliding for years — opaque communication, settlements that miss expectations, technology that distances instead of connects.
+
+Here&<span class="tag">#x27</span>;s what I&<span class="tag">#x27</span>;d say. Trust doesn&<span class="tag">#x27</span>;t get rebuilt at the policy level. It gets rebuilt at the file level — one claim, one policyholder at a time. The claim is the only part of the insurance product the customer actually experiences. Everything else is marketing.
+
+The carriers pulling ahead on satisfaction aren&<span class="tag">#x27</span>;t running better campaigns. They&<span class="tag">#x27</span>;re running tighter operations — named adjusters, direct lines, clear expectations, decisions made by people who can be reached.
+
+It&<span class="tag">#x27</span>;s not complicated. It is hard, because operational consistency at scale is always hard. But it&<span class="tag">#x27</span>;s the only thing that moves the trust number.
+
+When your policyholders describe their last claim, what do you want them to say?
+
+<span class="tag">#PolicyholderExperience</span> <span class="tag">#InsuranceClaims</span> <span class="tag">#ClaimsManagement</span></div>
+    <span class="more" data-t="cap-p8">&hellip;see more</span>
+    <div class="media"><img src="assets/quote_24jul.png" alt=""/></div>
+    <div class="acts">
+      <span class="act">&#128077; Like</span><span class="act">&#128172; Comment</span><span class="act">&#128257; Repost</span><span class="act">&#10148; Send</span>
+    </div>
+  </div>
+  <div class="review">
+    <button class="rv ok" data-p="p8">&#10003; Approve</button>
+    <button class="rv ch" data-p="p8">&#9998; Needs changes</button>
+    <div class="rnote">&#9998; Card reads “CEO – Aspen Claims Service” — confirm byline title. Routing to Mark&#x27;s profile pending your confirmation.</div>
+  </div>
+</div>
+
+<div class="post-wrap" id="p9">
+  <div class="datechip"><span class="dc-date">Mon · 27 July</span><span class="dc-kind">Video · Mark VO — creative in production (AI voiceover)</span></div>
+  <div class="card">
+    
+    <div class="head"><img class="av" src="assets/mark_avatar.jpg" alt="Mark Vetrovec"/>
+      <div class="who"><span class="nm">Mark Vetrovec</span><span class="tg">President & Co-Founder, Aspen Claims Service</span><span class="tm">Scheduled &middot; 27 July &#127760;</span></div>
+      <div class="fol">+ Follow</div>
+    </div>
+    <div class="cap clamp" id="cap-p9">Why isn&<span class="tag">#x27</span>;t Aspen the cheapest option in the IA market? It&<span class="tag">#x27</span>;s a fair question, and Mark answers it head-on.
+
+The cheapest partner isn&<span class="tag">#x27</span>;t actually cheap — it just moves the cost to a different line of your P&amp;L.
+
+When you price a claims partner, are you pricing the file, or the full cost of it a year later?
+
+<span class="tag">#ClaimsManagement</span> <span class="tag">#InsuranceClaims</span> <span class="tag">#ClaimsOperations</span></div>
+    <span class="more" data-t="cap-p9">&hellip;see more</span>
+    <div class="media vmock"><div class="vmock-chip">Creative in production · AI voiceover</div><div class="vmock-face"><img src="assets/mark_avatar.jpg" alt=""/></div><div class="vmock-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="vmock-overlay">&ldquo;The cheapest partner in the market is cheap because something in the operation isn&#x27;t there.&rdquo;<small>Mark Vetrovec · Aspen Claims Service</small></div></div>
+    <div class="acts">
+      <span class="act">&#128077; Like</span><span class="act">&#128172; Comment</span><span class="act">&#128257; Repost</span><span class="act">&#10148; Send</span>
+    </div>
+  </div>
+  <div class="review">
+    <button class="rv ok" data-p="p9">&#10003; Approve</button>
+    <button class="rv ch" data-p="p9">&#9998; Needs changes</button>
+    <div class="rnote">&#9998; Video not yet produced — placeholder shows the approved visual direction.</div>
+  </div>
+</div>
+
+<div class="post-wrap" id="p10">
+  <div class="datechip"><span class="dc-date">Wed · 29 July</span><span class="dc-kind">Static · Texas appraisal</span></div>
+  <div class="card">
+    
+    <div class="head"><div class="av av-aspen"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="#0e1b12" stroke="#5F9828" stroke-width="2"/><path d="M8 24 L16 11 L21 18 L24 14 L28 24 Z" fill="#5F9828"/></svg></div>
+      <div class="who"><span class="nm">Aspen Claims Service</span><span class="tg">Property Claims Services</span><span class="tm">Scheduled &middot; 29 July &#127760;</span></div>
+      <div class="fol">+ Follow</div>
+    </div>
+    <div class="cap clamp" id="cap-p10">The cleaner the original scope, the less room appraisal has to expand the claim.
+
+Texas has been tightening scrutiny on appraisal — how it&<span class="tag">#x27</span>;s triggered, how appraisers are selected, what happens when the process stalls, and how awards get documented. The operational implications for adjusters working Texas property files are clearer now than they were even six months ago.
+
+Three things worth flagging:
+
+Appraisal panel documentation needs to start earlier. Qualifications, communications, and decision rationale for everyone involved — not just the umpire — increasingly get reviewed downstream.
+
+Pre-appraisal scope detail matters more. Thin original scopes are where appraisal awards diverge most from initial reserves. A clean scope leaves less room to expand the claim into territory the original investigation didn&<span class="tag">#x27</span>;t support.
+
+Communication discipline is under scrutiny. What gets said, when, and to whom during appraisal is reviewable — and the carriers handling it well have protocols that protect the file&<span class="tag">#x27</span>;s defensibility throughout.
+
+If your Texas file workflow hasn&<span class="tag">#x27</span>;t been updated for these shifts, this quarter is a reasonable time.
+
+How early does appraisal documentation start in your Texas files — at the panel, or before it?
+
+<span class="tag">#TexasInsurance</span> <span class="tag">#PropertyClaims</span> <span class="tag">#ClaimsManagement</span></div>
+    <span class="more" data-t="cap-p10">&hellip;see more</span>
+    <div class="media"><img src="assets/static_29jul.png" alt=""/></div>
+    <div class="acts">
+      <span class="act">&#128077; Like</span><span class="act">&#128172; Comment</span><span class="act">&#128257; Repost</span><span class="act">&#10148; Send</span>
+    </div>
+  </div>
+  <div class="review">
+    <button class="rv ok" data-p="p10">&#10003; Approve</button>
+    <button class="rv ch" data-p="p10">&#9998; Needs changes</button>
+    
+  </div>
+</div>
+
+<div class="post-wrap" id="p11">
+  <div class="datechip"><span class="dc-date">Fri · 31 July</span><span class="dc-kind">Carousel · Part 04 of How Claims Actually Work</span></div>
+  <div class="card">
+    
+    <div class="head"><div class="av av-aspen"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="#0e1b12" stroke="#5F9828" stroke-width="2"/><path d="M8 24 L16 11 L21 18 L24 14 L28 24 Z" fill="#5F9828"/></svg></div>
+      <div class="who"><span class="nm">Aspen Claims Service</span><span class="tg">Property Claims Services</span><span class="tm">Scheduled &middot; 31 July &#127760;</span></div>
+      <div class="fol">+ Follow</div>
+    </div>
+    <div class="cap clamp" id="cap-p11">Coverage is one of the most-used words in insurance and one of the least understood — and most people learn what their policy actually covers in the middle of a loss, the worst possible time.
+
+A plain-language walk-through of what coverage means, where the gaps usually sit, and how to read your own policy before you need to.
+
+Part 04 of How Claims Actually Work.
+
+When did you last actually read your policy&<span class="tag">#x27</span>;s exclusions page?
+
+<span class="tag">#PropertyClaims</span> <span class="tag">#InsuranceClaims</span> <span class="tag">#ClaimsManagement</span></div>
+    <span class="more" data-t="cap-p11">&hellip;see more</span>
+    <div class="media carousel" data-n="6"><img class="cfr on" data-i="0" src="assets/carousel_31jul_f1.jpg" alt="frame 1"/><img class="cfr" data-i="1" src="assets/carousel_31jul_f2.jpg" alt="frame 2"/><img class="cfr" data-i="2" src="assets/carousel_31jul_f3.jpg" alt="frame 3"/><img class="cfr" data-i="3" src="assets/carousel_31jul_f4.jpg" alt="frame 4"/><img class="cfr" data-i="4" src="assets/carousel_31jul_f5.jpg" alt="frame 5"/><img class="cfr" data-i="5" src="assets/carousel_31jul_f6.jpg" alt="frame 6"/><button class="cnav prev" aria-label="previous">&#10094;</button><button class="cnav next" aria-label="next">&#10095;</button><span class="ccount">1/6</span><div class="cdots"><span class="dot on" data-i="0"></span><span class="dot" data-i="1"></span><span class="dot" data-i="2"></span><span class="dot" data-i="3"></span><span class="dot" data-i="4"></span><span class="dot" data-i="5"></span></div></div>
+    <div class="acts">
+      <span class="act">&#128077; Like</span><span class="act">&#128172; Comment</span><span class="act">&#128257; Repost</span><span class="act">&#10148; Send</span>
+    </div>
+  </div>
+  <div class="review">
+    <button class="rv ok" data-p="p11">&#10003; Approve</button>
+    <button class="rv ch" data-p="p11">&#9998; Needs changes</button>
+    
+  </div>
+</div>
+
+<div class="post-wrap" id="p12">
+  <div class="datechip"><span class="dc-date">Sun · 2 Aug</span><span class="dc-kind">Long-form text post · Mark&#x27;s profile</span></div>
+  <div class="card">
+    
+    <div class="head"><img class="av" src="assets/mark_avatar.jpg" alt="Mark Vetrovec"/>
+      <div class="who"><span class="nm">Mark Vetrovec</span><span class="tg">President & Co-Founder, Aspen Claims Service</span><span class="tm">Scheduled &middot; 2 Aug &#127760;</span></div>
+      <div class="fol">+ Follow</div>
+    </div>
+    <div class="cap clamp" id="cap-p12">A file that closes fast and reopens later costs more than one that closes a little slower and stays closed. Most CAT scorecards can&<span class="tag">#x27</span>;t see that.
+
+Carriers measure CAT response on a short list of numbers — cycle time, files closed per week, deployment speed, cost per file. They tell you how quickly a partner moved through volume. They don&<span class="tag">#x27</span>;t tell you what the volume actually cost.
+
+Here&<span class="tag">#x27</span>;s the problem. A file that closes quickly and reopens months later is not the same file as one that closes a bit slower and stays closed. The first one costs more. The cost just lands in a different column of the P&amp;L, well after the deployment dashboard everyone watched during the event has gone quiet.
+
+Most carriers never run that math all the way out.
+
+Why the cost stays hidden
+Cycle time gets reported during the deployment. Supplements and reopens get reported much later — by which point the event that produced them is closed in everyone&<span class="tag">#x27</span>;s mind.
+Different teams own different numbers. The CAT team owns deployment speed. Claims operations owns reopen rates. Each optimizes for the number it&<span class="tag">#x27</span>;s accountable to, and nobody runs the full-cycle cost that ties them together.
+Cost per file gets logged at close, not at final resolution. A file that closes, then reopens for more, shows up as two smaller numbers in two different reports — never as the single, larger true cost.
+None of this is anyone&<span class="tag">#x27</span>;s fault. It&<span class="tag">#x27</span>;s a measurement problem. The dashboard was built for visibility during the event, not for full-lifecycle cost.
+
+What changes when you measure it properly
+The partners with the fastest cycle times aren&<span class="tag">#x27</span>;t always the most cost-effective. Speed without process discipline produces files that don&<span class="tag">#x27</span>;t stay closed, and the cost shows up later.
+The partners who run a little slower but reopen far less are often the better commercial decision. The math doesn&<span class="tag">#x27</span>;t work in the obvious direction — it works in the direction the data actually supports.
+And the pressure points worth fixing usually sit upstream of the field: intake routing, coverage decision authority, and documentation standards that hold under surge. Those move total cost more than any speed gain in the field can.
+
+What I&<span class="tag">#x27</span>;d suggest after this season
+Look at each major event two ways: not just how fast files closed, but how many quietly reopened after they did. Put those side by side and the real story shows up.
+Then ask which partners had the smallest gap between how fast they closed and what the file finally cost. Those are the operations actually delivering what the speed numbers seem to promise.
+
+Claims leadership is going to get measured differently over the next decade — by full lifecycle cost, the way reinsurers and regulators are already moving. The partners who thrive in that world are the ones built for total cost, not for the dashboard number that runs during the event.
+
+Fast looks cheap. It usually isn&<span class="tag">#x27</span>;t.
+
+So before the next hurricane season, one question: are you measuring what your CAT response cost during the event, or what it cost once every file finally stopped moving?
+— Mark Vetrovec
+CEO, Aspen Claims Service</div>
+    <span class="more" data-t="cap-p12">&hellip;see more</span>
+    
+    <div class="acts">
+      <span class="act">&#128077; Like</span><span class="act">&#128172; Comment</span><span class="act">&#128257; Repost</span><span class="act">&#10148; Send</span>
+    </div>
+  </div>
+  <div class="review">
+    <button class="rv ok" data-p="p12">&#10003; Approve</button>
+    <button class="rv ch" data-p="p12">&#9998; Needs changes</button>
+    <div class="rnote">&#9998; Runs from Mark&#x27;s personal profile (routing pending your confirmation).</div>
+  </div>
+</div>
+
+<div class="post-wrap" id="p12r">
+  <div class="datechip"><span class="dc-date">Sun · 2 Aug</span><span class="dc-kind">Aspen page reshare of Mark&#x27;s post</span></div>
+  <div class="card">
+    <div class="reshare-line">&#8635; Aspen Claims Service reshared this from Mark Vetrovec</div>
+    <div class="head"><div class="av av-aspen"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="#0e1b12" stroke="#5F9828" stroke-width="2"/><path d="M8 24 L16 11 L21 18 L24 14 L28 24 Z" fill="#5F9828"/></svg></div>
+      <div class="who"><span class="nm">Aspen Claims Service</span><span class="tg">Property Claims Services</span><span class="tm">Scheduled &middot; 2 Aug &#127760;</span></div>
+      <div class="fol">+ Follow</div>
+    </div>
+    <div class="cap clamp" id="cap-p12r">&quot;Faster looks cheaper. Once the whole lifecycle of the file shows up in the numbers, it usually isn&<span class="tag">#x27</span>;t.&quot;
+— Mark Vetrovec, CEO · Aspen Claims Service
+
+Why a file that closes fast but reopens later costs more than one that closes a bit slower and stays closed — and why most CAT scorecards can&<span class="tag">#x27</span>;t see it.
+
+Are you measuring what your CAT response cost during the event, or after every file finally stopped moving?
+
+<span class="tag">#CATResponse</span> <span class="tag">#ClaimsManagement</span> <span class="tag">#InsuranceClaims</span></div>
+    <span class="more" data-t="cap-p12r">&hellip;see more</span>
+    <div class="media"><img src="assets/quote_2aug.png" alt=""/></div>
+    <div class="acts">
+      <span class="act">&#128077; Like</span><span class="act">&#128172; Comment</span><span class="act">&#128257; Repost</span><span class="act">&#10148; Send</span>
+    </div>
+  </div>
+  <div class="review">
+    <button class="rv ok" data-p="p12r">&#10003; Approve</button>
+    <button class="rv ch" data-p="p12r">&#9998; Needs changes</button>
+    <div class="rnote">&#9998; Quote card reads “CEO – Aspen Claims Service” — confirm the byline title before posting.</div>
+  </div>
+</div>
+</div>
+<div class="sumbar">
+  <button id="copysum">Copy my feedback summary</button>
+  <div class="hint">Approve / flag each post above, then copy the summary and paste it back to Harshit.</div>
+</div>
+<div class="footer">Prepared by Damco Digital for Aspen Claims Service &middot; July 2026 calendar review<br/>Review page only &mdash; nothing here is live. Creatives are final production files; captions verbatim from the approved calendar.</div>
+<script>
+document.querySelectorAll(".more").forEach(function(m){
+  var c=document.getElementById(m.dataset.t);
+  if(c.scrollHeight<=c.clientHeight+4){m.style.display="none";}
+  m.addEventListener("click",function(){
+    var open=c.classList.toggle("clamp")===false;
+    m.textContent=open?"see less":"\u2026see more";
+  });
+});
+document.querySelectorAll(".carousel").forEach(function(car){
+  var n=+car.dataset.n,i=0;
+  function go(k){
+    i=(k+n)%n;
+    car.querySelectorAll(".cfr").forEach(function(f){f.classList.toggle("on",+f.dataset.i===i)});
+    car.querySelectorAll(".dot").forEach(function(d){d.classList.toggle("on",+d.dataset.i===i)});
+    car.querySelector(".ccount").textContent=(i+1)+"/"+n;
+  }
+  car.querySelector(".prev").addEventListener("click",function(){go(i-1)});
+  car.querySelector(".next").addEventListener("click",function(){go(i+1)});
+  car.querySelectorAll(".dot").forEach(function(d){d.addEventListener("click",function(){go(+d.dataset.i)})});
+});
+var fb={};
+document.querySelectorAll(".rv").forEach(function(b){
+  b.addEventListener("click",function(){
+    var p=b.dataset.p,row=b.parentElement;
+    row.querySelectorAll(".rv").forEach(function(x){x.classList.remove("on")});
+    b.classList.add("on");
+    fb[p]=b.classList.contains("ok")?"Approved":"Needs changes";
+  });
+});
+document.getElementById("copysum").addEventListener("click",function(){
+  var lines=["Aspen July 2026 calendar \u2014 my review:"];
+  document.querySelectorAll(".post-wrap").forEach(function(w){
+    var d=w.querySelector(".dc-date").textContent,k=w.querySelector(".dc-kind").textContent;
+    lines.push("\u2022 "+d+" ("+k+"): "+(fb[w.id]||"\u2014 no call yet"));
+  });
+  var t=lines.join("\n");
+  (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){
+    document.getElementById("copysum").textContent="Copied \u2713 \u2014 paste it to Harshit";
+  }).catch(function(){prompt("Copy this:",t)});
+});
+</script>
+</body>
+</html>
